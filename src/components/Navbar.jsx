@@ -11,8 +11,17 @@ const logoUrl2 =
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(true);
 
+  const linksContainerRef = useRef(null);
+  const linksRef = useRef(null);
+
   const toggleLinks = () => {
     setShowLinks(!showLinks);
+  };
+
+  const linkStyles = {
+    height: showLinks
+      ? `${linksRef?.current?.getBoundingClientRect()?.height}px`
+      : '0px',
   };
 
   return (
@@ -31,11 +40,11 @@ const Navbar = () => {
         </div>
 
         <div
-          className={
-            showLinks ? 'links-container show-container' : 'links-container'
-          }
+          className='links-container'
+          ref={linksContainerRef}
+          style={linkStyles}
         >
-          <ul className='nav-links'>
+          <ul className='nav-links' ref={linksRef}>
             {links.map((link) => {
               const { id, url, text } = link;
               return (
