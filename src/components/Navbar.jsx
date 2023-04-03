@@ -29,20 +29,23 @@ const Navbar = () => {
             <FaBars />
           </button>
         </div>
-        {showLinks && (
-          <div className='nav-links'>
-            <ul>
-              {links.map((link) => {
-                const { id, url, text } = link;
-                return (
-                  <li key={id}>
-                    <a href={url}>{text}</a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
+
+        <div
+          className={
+            showLinks ? 'links-container show-container' : 'links-container'
+          }
+        >
+          <ul className='nav-links'>
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <a href={url}>{text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
         {/* <div className='social-icons'>
           <ul>
