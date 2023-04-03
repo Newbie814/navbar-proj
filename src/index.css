@@ -302,6 +302,9 @@ nav {
 }
 
 /* 160 px links container height (10rem)*/
+
+/* conment this out for example component */
+
 .links-container {
   overflow: hidden;
   transition: var(--transition);
