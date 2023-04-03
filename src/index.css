@@ -253,3 +253,50 @@ ul {
   margin-top: 1rem;
 }
 /* ============= PROJECT CSS =============== */
+nav {
+  background: var(--white);
+  box-shadow: var(--shadow-1);
+  /* position: sticky;
+  top: 0;
+  z-index: 10; */
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  background: transparent;
+  border-color: transparent;
+  color: var(--primary-500);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1.5rem;
+}
+
+.nav-toggle:hover {
+  color: var(--primary-700);
+  transform: rotate(90deg);
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links a {
+  color: var(--grey-700);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.nav-links a:hover {
+  color: var(--primary-500);
+  background: var(--primary-100);
+  padding-left: 1.5rem;
+}
