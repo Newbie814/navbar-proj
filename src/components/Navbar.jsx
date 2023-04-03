@@ -9,7 +9,7 @@ const logoUrl2 =
   'https://res.cloudinary.com/dylvkdabj/image/upload/v1647322071/website%20pics%20family/logo-banner_js0mkp.jpg';
 
 const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(true);
+  const [showLinks, setShowLinks] = useState(false);
 
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
@@ -55,19 +55,18 @@ const Navbar = () => {
             })}
           </ul>
         </div>
+        {/* social links */}
 
-        {/* <div className='social-icons'>
-          <ul>
-            {social.map((socialIcon) => {
-              const { id, url, icon } = socialIcon;
-              return (
-                <li key={id}>
-                  <a href={url}>{icon}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div> */}
+        <ul className='social-icons'>
+          {social.map((socialIcon) => {
+            const { id, url, icon } = socialIcon;
+            return (
+              <li key={id}>
+                <a href={url}>{icon}</a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </nav>
   );
